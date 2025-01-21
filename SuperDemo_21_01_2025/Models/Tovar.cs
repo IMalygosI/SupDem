@@ -44,4 +44,6 @@ public partial class Tovar
     public Bitmap image => Picture != null ? new Bitmap($"Assets//{Picture}") : new Bitmap($"Assets//picture.png");
 
     public SolidColorBrush Colors => Discount > 15 ? new SolidColorBrush(Color.Parse("#7fff00")) : new SolidColorBrush(Color.Parse("White"));
+
+    public decimal Price2 => Price - (Price * Discount/100);
 }

@@ -110,7 +110,16 @@
 									   Margin="10">
 								<TextBlock Text="Цена: "
 										   FontWeight="Bold"/>
-								<TextBlock Text="{Binding Price}"/>
+								<TextBlock Text="{Binding Price}"
+										   TextDecorations="Strikethrough"/>
+								<TextBlock Text=" Руб."
+										   TextDecorations="Strikethrough"
+										   FontWeight="Bold"/>
+							</DockPanel>
+							<DockPanel Grid.Column="1"
+									   Grid.Row="3"
+									   Margin="53 30 0 0">
+								<TextBlock Text="{Binding Price2}"/>
 								<TextBlock Text=" Руб."
 										   FontWeight="Bold"/>
 							</DockPanel>
