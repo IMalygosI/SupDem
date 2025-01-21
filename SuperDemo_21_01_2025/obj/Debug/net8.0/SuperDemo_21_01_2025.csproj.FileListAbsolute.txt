@@ -166,3 +166,4 @@ C:\Users\prdb\Desktop\Avelonia projects (EK)\SuperDemo_21_01_2025\SuperDemo_21_0
 C:\Users\prdb\Desktop\Avelonia projects (EK)\SuperDemo_21_01_2025\SuperDemo_21_01_2025\obj\Debug\net8.0\Avalonia\SuperDemo_21_01_2025.dll
 C:\Users\prdb\Desktop\Avelonia projects (EK)\SuperDemo_21_01_2025\SuperDemo_21_01_2025\obj\Debug\net8.0\Avalonia\SuperDemo_21_01_2025.pdb
 C:\Users\prdb\Desktop\Avelonia projects (EK)\SuperDemo_21_01_2025\SuperDemo_21_01_2025\obj\Debug\net8.0\refint\Avalonia\SuperDemo_21_01_2025.dll
+C:\Users\prdb\Desktop\Avelonia projects (EK)\SuperDemo_21_01_2025\SuperDemo_21_01_2025\obj\Debug\net8.0\SuperDemo_21_01_2025.sourcelink.json

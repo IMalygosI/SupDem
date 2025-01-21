@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using System;
 using System.Collections.Generic;
 
 namespace SuperDemo_21_01_2025.Models;
@@ -36,4 +38,8 @@ public partial class Tovar
     public virtual Manufacturer Manufacturer { get; set; } = null!;
 
     public virtual Postavshic Postavshic { get; set; } = null!;
+
+    public Bitmap image => Picture != null ? new Bitmap($"Assets//{Picture}") : new Bitmap($"Assets//picture.png");
+
+    public SolidColorBrush Colors => Discount > 15 ? new SolidColorBrush(Color.Parse("#7fff00")) : new SolidColorBrush(Color.Parse("White"));
 }
