@@ -18,6 +18,8 @@ public partial class DimaBaseContext : DbContext
 
     public virtual DbSet<Categoty> Categoties { get; set; }
 
+    public virtual DbSet<EdIzmerenium> EdIzmerenia { get; set; }
+
     public virtual DbSet<Manufacturer> Manufacturers { get; set; }
 
     public virtual DbSet<Postavshic> Postavshics { get; set; }
@@ -40,6 +42,18 @@ public partial class DimaBaseContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("Categoty_ID");
             entity.Property(e => e.Name).HasMaxLength(30);
+        });
+
+        modelBuilder.Entity<EdIzmerenium>(entity =>
+        {
+            entity.HasKey(e => e.EdIzmereniaId).HasName("ed_izmerenia_pk");
+
+            entity.ToTable("Ed_Izmerenia", "public_21-01-25");
+
+            entity.Property(e => e.EdIzmereniaId)
+                .ValueGeneratedNever()
+                .HasColumnName("Ed_Izmerenia_ID");
+            entity.Property(e => e.Name).HasColumnType("character varying");
         });
 
         modelBuilder.Entity<Manufacturer>(entity =>
@@ -78,9 +92,7 @@ public partial class DimaBaseContext : DbContext
             entity.Property(e => e.Articгul).HasMaxLength(10);
             entity.Property(e => e.CategotyId).HasColumnName("Categoty_ID");
             entity.Property(e => e.Description).HasColumnType("character varying");
-            entity.Property(e => e.EdIzmerenia)
-                .HasMaxLength(3)
-                .HasColumnName("Ed_Izmerenia");
+            entity.Property(e => e.EdIzmerenia).HasColumnName("Ed_Izmerenia");
             entity.Property(e => e.ManufacturerId).HasColumnName("Manufacturer_ID");
             entity.Property(e => e.MaxSkidka).HasColumnName("Max_Skidka");
             entity.Property(e => e.Name).HasColumnType("character varying");
@@ -91,6 +103,11 @@ public partial class DimaBaseContext : DbContext
                 .HasForeignKey(d => d.CategotyId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("tovars_categoty_fk");
+
+            entity.HasOne(d => d.EdIzmereniaNavigation).WithMany(p => p.Tovars)
+                .HasForeignKey(d => d.EdIzmerenia)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("tovars_ed_izmerenia_fk");
 
             entity.HasOne(d => d.Manufacturer).WithMany(p => p.Tovars)
                 .HasForeignKey(d => d.ManufacturerId)

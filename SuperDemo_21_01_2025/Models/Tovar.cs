@@ -1,5 +1,5 @@
-﻿using Avalonia.Media;
-using Avalonia.Media.Imaging;
+﻿using Avalonia.Media.Imaging;
+using Avalonia.Media;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +13,7 @@ public partial class Tovar
 
     public string Name { get; set; } = null!;
 
-    public string EdIzmerenia { get; set; } = null!;
+    public int EdIzmerenia { get; set; }
 
     public decimal Price { get; set; }
 
@@ -34,6 +34,8 @@ public partial class Tovar
     public string? Picture { get; set; }
 
     public virtual Categoty Categoty { get; set; } = null!;
+
+    public virtual EdIzmerenium EdIzmereniaNavigation { get; set; } = null!;
 
     public virtual Manufacturer Manufacturer { get; set; } = null!;
 
