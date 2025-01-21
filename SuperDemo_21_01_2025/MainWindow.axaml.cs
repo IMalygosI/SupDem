@@ -43,8 +43,6 @@ namespace SuperDemo_21_01_2025
                 tovars = tovars.Where(s => s.Discount > 15).ToList();
             }
 
-
-
             if (PriceBox.SelectedIndex == 1) 
             {
                 tovars = tovars.OrderByDescending(s =>s.Price).ToList();
@@ -53,6 +51,9 @@ namespace SuperDemo_21_01_2025
             {
                 tovars = tovars.OrderBy(s => s.Price).ToList();
             }
+
+            Vsego.Text = Helper.DataBase.Tovars.Count().ToString();
+            Pokaz.Text = tovars.Count().ToString();
 
             ListBox_Vivo.ItemsSource = tovars;
         }

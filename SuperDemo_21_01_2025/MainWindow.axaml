@@ -13,12 +13,11 @@
 		  ColumnDefinitions="*,*,*"
 		  RowDefinitions="*,9*,*">
 
-		<DockPanel Grid.Column="1"
+		<DockPanel Grid.Column="0"
 				   Grid.Row="0"
-				  
-				   HorizontalAlignment="Center"
+				   Margin="20 0 0 0"
+				   HorizontalAlignment="Left"
 				   VerticalAlignment="Center">
-
 
 			<ComboBox Name="DiscountBox"
 					  Height="33"
@@ -44,8 +43,20 @@
 			</ComboBox>
 
 		</DockPanel>
-		
-		
+
+		<DockPanel Grid.Column="1"
+				   Grid.Row="0"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center">
+			<TextBlock Text=""
+					   Name="Pokaz"/>
+			
+			<TextBlock Text="  из  "
+					   FontWeight="Bold"/>
+
+			<TextBlock Text=""
+					   Name="Vsego"/>
+		</DockPanel>
 		
 		<ListBox Name="ListBox_Vivo"
 				 Margin="20"
