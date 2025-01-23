@@ -1,0 +1,313 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+		MinWidth="1800" MaxWidth="1800"
+		MinHeight="900" MaxHeight="900"
+		x:CompileBindings="False"
+		WindowStartupLocation="CenterScreen"
+        x:Class="SuperDemo_21_01_2025.Redact"
+        Title="Redact">
+
+	<Border BorderThickness="4"
+			BorderBrush="Red">
+
+		<Grid ShowGridLines="False"
+			  Name="Redact_Grid"
+			  ColumnDefinitions="*,*,*"
+			  RowDefinitions="*,9*,*">
+
+			<StackPanel Grid.Column="1"
+						Grid.Row="1"
+						Margin="0 10 0 0"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top">
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Артикул: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<TextBox Text="{Binding Articгul}"
+							 Name="Articгul"
+							 BorderThickness="1"
+							 BorderBrush="Red"
+							 Watermark="Артикул"
+							 HorizontalAlignment="Right"
+							 VerticalAlignment="Center"
+							 Height="33"
+							 Width="250"/>
+
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Наименование: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<TextBox Text="{Binding Name}"
+							 Name="Name"
+							 BorderThickness="1"
+							 BorderBrush="Red"
+							 Watermark="Наименование"
+							 HorizontalAlignment="Right"
+							 VerticalAlignment="Center"
+							 Height="33"
+							 Width="250"/>
+
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Цена: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<TextBox Text="{Binding Price}"
+							 Name="Price"
+							 BorderThickness="1"
+							 BorderBrush="Red"
+							 Watermark="Цена"
+							 HorizontalAlignment="Right"
+							 VerticalAlignment="Center"
+							 Height="33"
+							 Width="250"/>
+
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Максимальная скидка: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<TextBox Text="{Binding MaxSkidka}"
+							 Name="MaxSkidka"
+							 BorderThickness="1"
+							 BorderBrush="Red"
+							 Watermark="Максимальная скидка"
+							 HorizontalAlignment="Right"
+							 VerticalAlignment="Center"
+							 Height="33"
+							 Width="250"/>
+
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Скидка: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<TextBox Text="{Binding Discount}"
+							 Name="Discount"
+							 BorderThickness="1"
+							 BorderBrush="Red"
+							 Watermark="Скидка"
+							 HorizontalAlignment="Right"
+							 VerticalAlignment="Center"
+							 Height="33"
+							 Width="250"/>
+
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Количество: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<TextBox Text="{Binding Count}"
+							 Name="Count"
+							 BorderThickness="1"
+							 BorderBrush="Red"
+							 Watermark="Количество"
+							 HorizontalAlignment="Right"
+							 VerticalAlignment="Center"
+							 Height="33"
+							 Width="250"/>
+
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Единица измерения: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<ComboBox Name="EdIzmer"
+							  HorizontalAlignment="Right"
+							  VerticalAlignment="Center"
+							  Height="33"
+							  BorderThickness="1"
+							  BorderBrush="Red"
+							  Width="250">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Категория: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<ComboBox Name="Categor"
+							  BorderThickness="1"
+							  BorderBrush="Red"
+							  HorizontalAlignment="Right"
+							  VerticalAlignment="Center"
+							  Height="33"
+							  Width="250">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Поставщик: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<ComboBox Name="Postav"
+							  BorderThickness="1"
+							  BorderBrush="Red"
+							  HorizontalAlignment="Right"
+							  VerticalAlignment="Center"
+							  Height="33"
+							  Width="250">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</DockPanel>
+
+				<DockPanel Margin="0 0 0 10"
+						   HorizontalAlignment="Right">
+
+					<TextBlock Text="Производитель: "
+							   FontWeight="Bold"
+							   VerticalAlignment="Center"/>
+
+					<ComboBox Name="Manufactur"
+							  BorderThickness="1"
+							  BorderBrush="Red"
+							  HorizontalAlignment="Right"
+							  VerticalAlignment="Center"
+							  Height="33"
+							  Width="250">
+						<ComboBox.ItemTemplate>
+							<DataTemplate>
+								<TextBlock Text="{Binding Name}"/>
+							</DataTemplate>
+						</ComboBox.ItemTemplate>
+					</ComboBox>
+				</DockPanel>
+
+			</StackPanel>
+
+			<DockPanel Margin="10"
+					   Grid.Column="2"
+					   Grid.Row="1">
+
+				<TextBlock Text="Описание: "
+						   FontWeight="Bold"
+						   HorizontalAlignment="Left"
+						   VerticalAlignment="Top"/>
+
+				<TextBox Text="{Binding Description}"
+						 TextWrapping="Wrap"
+						 BorderThickness="1"
+						 BorderBrush="Red"
+						 Name="Description"
+						 Watermark="Описание"/>
+
+			</DockPanel>
+
+			<StackPanel Margin="10"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Grid.Column="0"
+						Grid.Row="1">
+
+				<TextBlock Text="Изображение"
+						   FontWeight="Bold"
+						   Margin="0 0 0 10"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"/>
+
+				<Border BorderThickness="2"
+						Height="375"
+						Width="375"
+						CornerRadius="10"
+						BorderBrush="OrangeRed">
+
+					<Image Source="{Binding image}"
+						   Height="350"
+						   Width="350"
+						   Name="Images"/>
+				</Border>
+
+			</StackPanel>
+
+			<DockPanel Grid.Column="0"
+					   Grid.Row="2"
+					   Margin="10 0 0 0"
+					   HorizontalAlignment="Left"
+					   VerticalAlignment="Center">
+
+				<Button CornerRadius="10"
+						Click="Button_Click_Save"
+						BorderThickness="2"
+						BorderBrush="Black"
+						Background="Green">
+					<TextBlock Text="Сохранить"
+							   Foreground="White"/>
+				</Button>
+
+				<Button CornerRadius="10"
+						Click="Button_Click_Out"
+						Margin="10 0 0 0"
+						BorderThickness="2"
+						BorderBrush="Black"
+						Background="Red">
+					<TextBlock Text="Отмена"
+							   Foreground="White"/>
+				</Button>
+
+				<Button CornerRadius="10"
+						Margin="30 0 0 0"
+						Click="Button_Click_Image"
+						BorderThickness="2"
+						BorderBrush="Black"
+						Background="Green">
+					<TextBlock Text="Добавить картинку"
+							   Foreground="White"/>
+				</Button>
+			</DockPanel>
+
+		</Grid>
+	</Border>
+</Window>

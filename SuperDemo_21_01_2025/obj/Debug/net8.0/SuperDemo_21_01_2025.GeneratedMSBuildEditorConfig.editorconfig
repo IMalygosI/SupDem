@@ -30,5 +30,11 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/prdb/Desktop/Avelonia projects (EK)/SuperDemo_21_01_2025/SuperDemo_21_01_2025/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/prdb/Desktop/Avelonia projects (EK)/SuperDemo_21_01_2025/SuperDemo_21_01_2025/Error.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/prdb/Desktop/Avelonia projects (EK)/SuperDemo_21_01_2025/SuperDemo_21_01_2025/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/prdb/Desktop/Avelonia projects (EK)/SuperDemo_21_01_2025/SuperDemo_21_01_2025/Redact.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

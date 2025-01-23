@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="400"
+		MinWidth="800" MaxWidth="800"
+		MinHeight="400" MaxHeight="400"
+		x:CompileBindings="False"
+		WindowStartupLocation="CenterScreen"
+        x:Class="SuperDemo_21_01_2025.Error"
+        Title="Error">
+	<Border BorderThickness="2"
+			BorderBrush="Red">
+		<Grid ShowGridLines="False"
+			  Name="Redact_Grid"
+			  Background="Wheat"
+			  ColumnDefinitions="*,*,*"
+			  RowDefinitions="*,*,*">
+
+
+				<TextBlock Text=""
+						   Grid.ColumnSpan="3"
+						   Grid.Row="1"
+						   TextWrapping="Wrap"
+						   Name="Warning"
+						   FontWeight="Bold"
+						   FontSize="16"
+						   Margin="0 0 0 80"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Top"/>
+
+				<Button CornerRadius="10" 
+						Grid.ColumnSpan="3"
+						Grid.Row="1"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Bottom"
+						Margin="10 0 0 0"
+						Click="Button_Click"
+						BorderThickness="2"
+						BorderBrush="Black"
+						Background="Green">
+					<TextBlock Text="Закрыть"
+							   Foreground="White"/>
+				</Button>
+		</Grid>
+	</Border>
+</Window>

@@ -45,5 +45,5 @@ public partial class Tovar
 
     public SolidColorBrush Colors => Discount > 15 ? new SolidColorBrush(Color.Parse("#7fff00")) : new SolidColorBrush(Color.Parse("White"));
 
-    public decimal Price2 => Price - (Price * Discount/100);
+    public decimal Price2 => Price - (Price * Discount / 100);
 }
